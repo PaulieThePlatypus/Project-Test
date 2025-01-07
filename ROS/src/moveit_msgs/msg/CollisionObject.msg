@@ -53,4 +53,8 @@ byte APPEND=2
 byte MOVE=3
 
 # Operation to be performed
+<<<<<<< HEAD
 byte operation
+=======
+byte operation
+>>>>>>> Update submodule pointers

@@ -1777,7 +1777,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TopicName: /ur10e_joints
+<<<<<<< HEAD
   m_NiryoOne: {fileID: 296890220}
+=======
+  m_UR10e: {fileID: 296890220}
+>>>>>>> Update submodule pointers
   m_Target: {fileID: 81181250}
   m_TargetPlacement: {fileID: 185977668}
 --- !u!4 &513798500
@@ -1806,10 +1810,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f722ee95ae863ef59ace5b1eb2b3e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_RosServiceName: niryo_moveit
   m_NiryoOne: {fileID: 296890220}
   m_Target: {fileID: 81181250}
   m_TargetPlacement: {fileID: 185977668}
+=======
+  m_TopicName: /collision_object
+  m_RosServiceName: ur10e_rg2_moveit
+  m_UR10e: {fileID: 296890220}
+  m_Target: {fileID: 81181250}
+  m_TargetPlacement: {fileID: 185977668}
+  m_Table: {fileID: 1761533490}
+>>>>>>> Update submodule pointers
 --- !u!1 &514456347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,12 +2419,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
+=======
+    - target: {fileID: 4064412142990923027, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Update submodule pointers
     - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 0.968
       objectReference: {fileID: 0}
     - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
@@ -2421,6 +2442,17 @@ PrefabInstance:
     - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04
+=======
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6509
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.2
+>>>>>>> Update submodule pointers
       objectReference: {fileID: 0}
     - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4535,9 +4567,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+<<<<<<< HEAD
       - m_Target: {fileID: 513798499}
         m_TargetAssemblyTypeName: SourceDestinationPublisher, Unity.Robotics.PickAndPlace
         m_MethodName: Publish
+=======
+      - m_Target: {fileID: 513798501}
+        m_TargetAssemblyTypeName: TrajectoryPlanner, Unity.Robotics.PickAndPlace
+        m_MethodName: PublishJoints
+>>>>>>> Update submodule pointers
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7083,6 +7121,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBaseLink: 0
+<<<<<<< HEAD
+=======
+--- !u!1 &1761533490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3302142234816977626, guid: 85db2308098d34a79837fb7356902f62, type: 3}
+  m_PrefabInstance: {fileID: 1926674471}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Update submodule pointers
 --- !u!1001 &1763135901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7924,6 +7970,17 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2781043625631727712, guid: 85db2308098d34a79837fb7356902f62, type: 3}
+<<<<<<< HEAD
+=======
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781043625631727712, guid: 85db2308098d34a79837fb7356902f62, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781043625631727712, guid: 85db2308098d34a79837fb7356902f62, type: 3}
+>>>>>>> Update submodule pointers
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}

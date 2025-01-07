@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: e7d9c3030e21048d498c999ec090012b
 ModelImporter:
+<<<<<<< HEAD
   serializedVersion: 20101
+=======
+  serializedVersion: 20200
+>>>>>>> Update submodule pointers
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -31,7 +35,11 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
+<<<<<<< HEAD
     isReadable: 0
+=======
+    isReadable: 1
+>>>>>>> Update submodule pointers
   meshes:
     lODScreenPercentages: []
     globalScale: 0.01
@@ -95,6 +103,10 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
+<<<<<<< HEAD
+=======
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+>>>>>>> Update submodule pointers
   additionalBone: 0
   userData: 
   assetBundleName: 

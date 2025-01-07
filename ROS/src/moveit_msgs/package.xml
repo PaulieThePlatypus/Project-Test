@@ -17,6 +17,10 @@
   <url type="repository">https://github.com/ros-planning/moveit_msgs</url>
 
   <buildtool_depend>catkin</buildtool_depend>
+<<<<<<< HEAD
+=======
+
+>>>>>>> Update submodule pointers
   <depend>message_generation</depend>
   <depend>octomap_msgs</depend>
   <depend>actionlib_msgs</depend>
