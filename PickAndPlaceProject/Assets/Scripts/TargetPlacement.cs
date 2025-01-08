@@ -182,8 +182,4 @@ namespace Unity.Robotics.PickAndPlace
             m_LastColoredState = m_CurrentState;
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> Update submodule pointers
