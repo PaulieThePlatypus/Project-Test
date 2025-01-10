@@ -1,62 +1,105 @@
-<p align="center"><img src="img/0_pick_place.gif"/></p>
+# UR10e Robot Arm with RG2 Gripper Pick and Place Project
 
-# Pick-and-Place Tutorial
+## Overview
 
-Unity's tools for robotic simulation enable users to integrate Unity with ROS-based workflows. [ROS](http://wiki.ros.org/ROS/Introduction) (Robot Operating System) provides services such as message-passing, package management, low-level device control, and hardware abstraction. Unity's robotics tools are able to support **importing URDF files** and **sending and receiving messages between ROS and Unity**. This tutorial will go through the steps necessary to integrate ROS with Unity, from installing the Unity Editor to creating a scene with an imported URDF to completing a pick-and-place task with known poses using [MoveIt](https://moveit.ros.org/) trajectory planning.
+This project is a part of a module taught at Vietnamese-German University (VGU), instructed by Dr. Dong Quang Huan. The goal of this project is to adapt the pick and place tutorial from the [Unity Robotics Hub](https://github.com/Unity-Technologies/Unity-Robotics-Hub/tree/main/tutorials/pick_and_place) for the UR10e robot arm integrated with the OnRobot RG2 gripper. The objective is to automate the process of picking an object from inside a 3D printer and placing it at a desired location in a simulated environment using Unity. The project utilizes the Stochastic Trajectory Optimization for Motion Planning (STOMP) planner for motion planning.
 
-This tutorial is designed such that you do not need prior experience with Unity or C# in order to follow the scene setup steps, and you do not need prior robotics experience to get started with ROS integration. The tutorial is divided into high-level phases, from basic Unity and ROS initial setup through executing a pick-and-place task.
+## Table of Contents
 
-**Want to skip the tutorial and run the full demo? Check out our [Quick Demo](quick_demo.md)**
+- [Overview](#overview)
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Clone the Repository](#clone-the-repository)
+  - [Set Up ROS Workspace](#set-up-ros-workspace)
+  - [Configure Unity Project](#configure-unity-project)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-> Note: This project has been tested with Python 2 and ROS Melodic, as well as Python 3 and ROS Noetic.
+## Installation
 
----
+To set up this project, follow these steps:
 
-We're currently working on lots of things! As a first step for this tutorial, please take a short moment fill out our [survey](https://unitysoftware.co1.qualtrics.com/jfe/form/SV_0ojVkDVW0nNrHkW) to help us identify what products and packages to build next.
+### Prerequisites
 
----
+Ensure you have the following software installed:
 
-### Pick-and-Place Tutorial
-  - [Requirements](#requirements)
-  - [Part 0: ROS Setup](#part-0-ros-setup)
-  - [Part 1: Create Unity scene with imported URDF](#part-1-create-unity-scene-with-imported-urdf)
-  - [Part 2: ROS–Unity Integration](#part-2-rosunity-integration)
-  - [Part 3: Pick-and-Place In Unity](#part-3-pick-and-place-in-unity)
-  - [Part 4: Pick-and-Place on the Real Robot](#part-4-pick-and-place-on-the-real-robot)
+- [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
+- [MoveIt](https://moveit.ros.org/install/)
+- [Unity hub](https://unity.com/download)
+- [Unity 2020.3.11f1 (LTS)](https://unity.com/releases/editor/archive)
 
-## Requirements
+### Clone the Repository
 
-This repository provides project files for the pick-and-place tutorial, including Unity assets, URDF files, and ROS scripts. Clone this repository to a location on your local machine:
-  ```bash
-  git clone --recurse-submodules https://github.com/Unity-Technologies/Unity-Robotics-Hub.git
-  ```
+```bash
+git clone https://github.com/Trung2204/ur10e_rg2_PickAndPlace.git
+cd ur10e_rg2_PickAndPlace
+```
 
-## [Part 0: ROS Setup](0_ros_setup.md)
+### Set Up ROS Workspace
 
-<img src="img/0_docker.png" width="400"/>
+1. The provided files require the following packages to be installed. ROS Melodic users should run the following commands if the packages are not already present:
 
-This part provides two options for setting up your ROS workspace: using Docker, or manually setting up a catkin workspace.
+```bash
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install python3-pip ros-noetic-robot-state-publisher ros-noetic-moveit ros-noetic-rosbridge-suite ros-noetic-joy ros-noetic-ros-control ros-noetic-ros-controllers
+sudo -H pip3 install rospkg jsonpickle
+```
 
-## [Part 1: Create Unity scene with imported URDF](1_urdf.md)
+2. If you have not already built and sourced the ROS workspace since importing the new ROS packages, navigate to your ROS workplace, and do it:
 
-<img src="img/1_end.gif" width="400"/>
+```bash
+cd ROS
+catkin_make
+source devel/setup.bash
+```
 
-This part includes downloading and installing the Unity Editor, setting up a basic Unity scene, and importing a robot--the [Niryo One](https://niryo.com/niryo-one/)--using the URDF Importer.
+Ensure there are no errors. The ROS workspace is now ready to accept commands!
 
-## [Part 2: ROS–Unity Integration](2_ros_tcp.md)
+### Configure Unity Project
 
-<img src="img/2_echo.png" width="400"/>
+1. Open Unity Hub and go to the "Projects" tab, click the "Add" button, and navigate to and select the UnityProject directory within this cloned repository (`/PATH/TO/ur10e_rg2_PickAndPlace/UnityProject/`) to add the project to your Hub.
 
-This part covers creating a TCP connection between Unity and ROS, generating C# scripts from a ROS msg and srv files, and publishing to a ROS topic.
+2. Click the newly added project to open it.
 
-## [Part 3: Pick-and-Place In Unity](3_pick_and_place.md)
+3. In the Unity Project window, double click to open the `Assets/Scenes/EmptyScene` scene if it is not already open.
 
-<img src="img/0_pick_place.gif" width="400"/>
+## Usage
 
-This part includes the preparation and setup necessary to run a pick-and-place task with known poses using MoveIt. Steps covered include creating and invoking a motion planning service in ROS, moving a Unity Articulation Body based on a calculated trajectory, and controlling a gripping tool to successfully grasp and drop an object.
+Follow these steps to run the simulation:
+// TODO: Add usage
 
-## [Part 4: Pick-and-Place on the Real Robot](4_pick_and_place.md)
+## Project Structure
 
-<img src="img/4_pick_and_place.gif" width="400"/>
+```
+ur10e_rg2_PickAndPlace/
+├── ROS/
+│   ├── build/
+│   ├── devel/
+│   ├── src/
+│   │   ├── ur10e_rg2_moveit/
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── package.xml
+│   │   │   ├── config/
+│   │   │   ├── launch/
+│   │   ├── ur10e_rg2_urdf/
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── package.xml
+│   │   │   ├── urdf/
+│   │   │   ├── meshes/
+├── UnityProject/
+│   ├── Assets/
+│   ├── Library/
+│   ├── Logs/
+│   ├── Packages/
+│   ├── ProjectSettings/
+│   ├── UserSettings/
+├── README.md
+```
 
-This part is going to be a little different than the previous tutorials in that it will utilize a real Niryo One robot. We do not assume that everyone has access to a Niryo One outside of simulation. As such this tutorial should mostly be used as a reference for how to move from executing commands on a simulated robot to a real one.
+## Contributing
+// TODO: Add contributing
+
+## License
+// TODO: Add License
